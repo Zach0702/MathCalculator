@@ -1,0 +1,66 @@
+﻿@*@model  IndexViewModel*@
+@model  PersonalViewForm
+
+@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+
+    @*<form>
+        <label>Text</label><br />
+        <input type ="text" /><br />
+        <label>CheckBox</label><br />
+        <input type ="checkbox"/><br />
+        <label>Number</label><br />
+        <input type = "number" /><br />
+
+        <label>Select</label>
+        <select>
+            <option value="TheDude">The dude</option>
+            <option value="TheDudettte">The dudette</option>
+            <option value="TheGuyTechnology">The Guy Technology</option>
+        </select>
+
+        <label>Text area</label>
+        <textarea>Okay</textarea>
+    </form>*@
+
+    @*<div>
+        <form asp-controller="Home" asp-action="Privacy" method="post">
+            <label>Name</label>
+            <input asp-for="Name" />
+
+            <label>Date Of Birth</label>
+            <input asp-for="DateOfBirth" /><br />
+
+            <button>Submit</button><br />
+        </form>
+    </div>*@
+
+    <div>
+        <form asp-controller="Home" asp-action="Contact" method="post">
+            <label>Favorite Movie</label>
+            <select id="ListOfMovies">
+               asp-for"FavoriteMovie" asp-items=@Model.Movies
+            </select><br/>
+            
+            <label>Home Town</label>
+            <input asp-for="HomeTown"/><br />
+            <label>Number of Pets</label>
+            <input asp-for="NumberOfPets" /><br />
+            <label>Favorite Food</label>
+            <input asp-for="FavoriteFood" /><br />
+
+            <button>Submit</button>
+
+        </form>
+
+    </div>
+
+    
+  
+
+
+
+    

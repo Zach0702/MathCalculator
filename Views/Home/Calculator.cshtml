@@ -1,0 +1,21 @@
+﻿@model CalculatorNumberForm
+@{ 
+    
+   
+}
+
+
+    <div>
+        <form asp-controller="Home" asp-action="Calculator" method="post">
+            <label>Number One</label> <label>Number Two</label><br />
+            <input asp-for="NumberOne" /><input asp-for="NumberTwo" /><br />
+            @foreach (var operators in Model.MathOperators)
+            {
+                <input type="radio" asp-for="MathOperator" value="@operators" />@operators<br />
+            }
+            <button>Calculate Result</button> <br />
+
+        </form>
+        <h1>@Model.Total</h1>
+
+    </div>
